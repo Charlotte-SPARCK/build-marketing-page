@@ -1,0 +1,96 @@
+<!-- Import custom components -->
+{% from 'components/nhsd-header/macro.njk' import nhsdHeader %}
+{% from 'components/nhsd-footer/macro.njk' import nhsdFooter %}
+{% from 'components/stages/macro.njk' import stages %}
+{% from 'components/nhsd-task-list/macro.njk' import nhsdTaskList %}
+{% from 'components/govuk/character-count/macro.njk' import govukCharacterCount %}
+{% from 'components/govuk/file-upload/macro.njk' import govukFileUpload %}
+
+
+<!--
+  This is the main layout where you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Extends the layout from /docs/views/template.html -->
+{% extends "template.html" %}
+
+<!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+{% endblock %}
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Buying Catalogue
+{% endblock %}
+
+<!-- Header goes inside the header block -->
+<!-- More info and code for the header can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/header -->
+{% block header %}
+  {{ nhsdHeader({
+      "showNav": "true",
+      "primaryLinks": [
+        {
+          "label" : "Really Kool Document Manager, 1.0"
+        },
+        {
+          'url' : '/',
+          'label' : 'Support'
+        }
+      ]
+    })
+  }}
+{% endblock %}
+
+<!-- Footer goes inside the footer block -->
+<!-- More info and code for the footer can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/footer -->
+{% block footer %}
+  {{ nhsdFooter({
+    "list": "nhsuk-footer__list--three-columns",
+    "list1": [
+      {
+        "URL": "/",
+        "label": "About the Buying Catalogue"
+      },
+      {
+        "URL": "/",
+        "label": "Process overview"
+      },
+      {
+        "URL": "/",
+        "label": "Supplier checklist"
+      }
+    ],
+    "list2": [
+      {
+        "URL": "/",
+        "label": "Catalogue submissions"
+      },
+      {
+        "URL": "/",
+        "label": "NHS Digital service desk"
+      }
+    ],
+    "list3": [
+      {
+        "URL": "/",
+        "label": "NHS Digital"
+      },
+      {
+        "URL": "/",
+        "label": "Capabilities and Standards Model"
+      }
+    ]
+  })}}
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    <!-- Custom JavaScript files can be added to this file -->
+    {% include "includes/scripts.html" %}
+    <!-- For adding page specific JavsScript -->
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+{% endblock %}

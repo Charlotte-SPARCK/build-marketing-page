@@ -1,0 +1,114 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+  {{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "My Solutions"
+    },
+    {
+      href: "/",
+      text: "Adding a Solution"
+    }
+  ],
+    href: "all-sections",
+    text: "All sections"
+    }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row nhsuk-u-margin-bottom-6">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      <!-- Change the page title here -->
+      <h2>
+        Solution description
+      </h2>
+
+      <h4 class="nhsuk-body-l">Add further detail about your Solution to provide the buyer with more information.</h4>
+
+      <p class="nhsuk-body-l">
+        This information will be visible to buyers on your Solution page but it will not affect search ranking.
+      </p>
+      <p class="nhsuk-body-l">
+        <b>*indicates required field.</b>
+      </p>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+      {{ govukCharacterCount({
+         name: "summary",
+         id: "summary",
+         maxlength: 300,
+         label: {
+           html: "<b>Summarise your Solution*</b>"
+         },
+         hint: {
+           html: "Your text from Stage 1, Solution registration has been automatically inserted but can be edited."
+         }
+       }) }}
+
+       {{ govukCharacterCount({
+          name: "about-solution",
+          id: "about-solution",
+          maxlength: 1000,
+          rows: 17,
+          label: {
+            html: "<b>Write a description about your Solution</b>"
+          },
+          hint: {
+            text: "This description will give the buyer more insight into your Solution and the qualitites it can provide."
+          }
+        }) }}
+
+        {{ input({
+          "label": {
+            "html": "<b>Enter a link to more Solution information</b>"
+          },
+            "hint": {
+            "html": "<p>Buyers will be directed to an external link</p>"
+          },
+            "id": "about-solution-url",
+          "name": "about-solution-url"
+        }) }}
+
+      </div>
+    </div>
+
+    <div class="nhsuk-grid-row nhsuk-u-padding-top-7">
+      <div class="nhsuk-grid-column-three-quarters">
+        {{ button({
+          "text": "Save and return to all sections"
+        }) }}
+
+        {{ backLink({
+          "href": "all-sections",
+          "text": "Return to all sections"
+        }) }}
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,73 @@
+// Import NHS.UK frontend library
+@import 'node_modules/nhsuk-frontend/packages/nhsuk';
+
+// Import GOV.UK frontend library
+@import "node_modules/govuk-frontend/govuk/all";
+
+
+// Components that are not in the NHS.UK frontend library
+@import 'components/panel-confirmation';
+@import 'components/related-nav';
+@import 'components/nhsd-header';
+@import 'components/nhsd-footer';
+@import 'components/stages';
+@import 'components/nhsd-task-list';
+
+///////////////////////////////////////////
+// Add your custom CSS/Sass styles below...
+///////////////////////////////////////////
+
+html {
+  background-color: $color_nhsuk-grey-5;
+}
+
+h5 {
+  margin-top: 60px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.govuk-hint {
+  padding-bottom:10px;
+}
+
+.nhsuk-hint {
+  padding-bottom:10px;
+}
+
+.govuk-label {
+  font-family: "Frutiger W01", Helvetica, Arial, sans-serif;
+}
+
+.govuk-hint {
+  font-family: "Frutiger W01", Helvetica, Arial, sans-serif;
+  color: $color_nhsuk-grey-1;
+}
+
+.govuk-textarea {
+  border-color: $color_nhsuk-blue
+}
+
+.govuk-textarea:focus {
+  box-shadow: none;
+}
+
+.nhsuk-input {
+  border-color: $color_nhsuk-blue;
+}
+
+.govuk-file-upload:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.govuk-file-upload:focus-within {
+  box-shadow: none;
+  outline: none;
+}
+
+.nhsuk-details {
+  margin-top: 0;
+}
