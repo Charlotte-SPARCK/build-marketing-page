@@ -55,12 +55,11 @@
     </div>
   </div>
 
-
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-three-quarters" id="checks">
+    <div class="nhsuk-grid-column-three-quarters">
       {{ checkboxes({
         "idPrefix": "client-application-type",
-        "name": "client-application-type",
+        "name": "client-application-type"
         "fieldset": {
           "legend": {
             "html": "<b>Select the client application types your Solution supports*</b>"
@@ -71,16 +70,15 @@
         },
         "items": [
           {
-            "value": "ON",
+            "value": "browser-based",
             "text": "Browser based"
-
           },
           {
-            "value": "ON",
+            "value": "mobile-tablet",
             "text": "Native mobile or tablet"
           },
           {
-            "value": "ON",
+            "value": "native-desktop",
             "text": "Native desktop"
           }
         ]
