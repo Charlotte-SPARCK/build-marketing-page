@@ -37,7 +37,7 @@
 
       <!-- Change the page title here -->
       <h2>
-        Build your Solution page - All section
+        Build your Solution page - All sections
       </h2>
 
       <p class="nhsuk-u-margin-bottom-5">
@@ -58,6 +58,8 @@
               </h2>
               <ul class="app-task-list__items">
               {{ nhsdTaskList({
+                "id": "about-solution",
+                "name": "about-solution",
                 "task": [
                   {
                     "URL": "solution-description",
@@ -86,6 +88,8 @@
               </h2>
               <ul class="app-task-list__items">
               {{ nhsdTaskList({
+                "id": "client-type",
+                "name": "client-type",
                 "task": [
                   {
                     "URL": "client-application-type",
@@ -99,6 +103,8 @@
               <ul class="app-task-list__items">
               <div class="nhsuk-inset-text nhsuk-u-margin-left-5">
               {{ nhsdTaskList({
+                "id": "client-type-section",
+                "name": "client-type-section",
                 "task": [
                   {
                     "URL": "browser-based",
@@ -120,6 +126,24 @@
                   }
                 ]
               }) }}
+              {{ nhsdTaskList({
+                "id": "disabled",
+                "name": "disabled",
+                "list": [
+                  {
+                    "title": "Browser based",
+                    "status": "Select from client application types"
+                  },
+                  {
+                    "title": "Native mobile or tablet",
+                    "status": "Select from client application types"
+                  },
+                  {
+                    "title": "Native desktop",
+                    "status": "Select from client application types"
+                  }
+                ]
+              }) }}
               </div>
               </ul>
               <h2 class="app-task-list__section">
@@ -127,6 +151,8 @@
               </h2>
               <ul class="app-task-list__items">
               {{ nhsdTaskList({
+                "id": "hosting-type",
+                "name": "hosting-type",
                 "task": [
                   {
                     "URL": "public-cloud",
@@ -160,6 +186,8 @@
               </h2>
               <ul class="app-task-list__items">
               {{ nhsdTaskList({
+                "id": "roadmap",
+                "name": "roadmap",
                 "task": [
                   {
                     "URL": "roadmap",
@@ -175,6 +203,8 @@
               </h2>
               <ul class="app-task-list__items">
               {{ nhsdTaskList({
+                "id": "about-organisation",
+                "name": "about-organisation",
                 "task": [
                   {
                     "URL": "about-supplier",
