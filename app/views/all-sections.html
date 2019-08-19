@@ -44,6 +44,11 @@
         Provide information to help buyers learn more about and evaluate your Solution. Once you’ve completed each section, you can preview and send the page for moderation. After your page has been published, you will be able to update it, but the changes will go through moderation before they are published.
       </p>
 
+
+      <p class="nhsuk-body-l">
+        <b>*indicates required field.</b>
+      </p>
+
       {{ button({
         "href": "marketing-page",
         "text": "Preview Marketing page",
@@ -64,8 +69,8 @@
                 "task": [
                   {
                     "URL": "solution-description",
-                    "title": "Solution description",
-                    "requirement": "*Mandatory",
+                    "title": "Solution description*",
+                    "requirement": "Mandatory",
                     "status": "complete"
                   },
                   {
@@ -76,8 +81,8 @@
                   },
                   {
                     "URL": "integrations",
-                    "title": "Integrations",
-                    "requirement": "*Mandatory",
+                    "title": "Integrations*",
+                    "requirement": "Mandatory",
                     "status": "incomplete"
                   }
                 ]
@@ -94,8 +99,8 @@
                 "task": [
                   {
                     "URL": "client-application-type",
-                    "title": "Client application type",
-                    "requirement": "*Mandatory",
+                    "title": "Client application type*",
+                    "requirement": "Mandatory",
                     "status": "complete"
                   }
                 ]
@@ -109,20 +114,20 @@
                 "task": [
                   {
                     "URL": "browser-based",
-                    "title": "Browser based",
-                    "requirement": "*Mandatory",
+                    "title": "Browser based*",
+                    "requirement": "Mandatory",
                     "status": "complete"
                   },
                   {
                     "URL": "native-mobile-or-tablet",
-                    "title": "Native mobile or tablet",
-                    "requirement": "*Mandatory",
+                    "title": "Native mobile or tablet*",
+                    "requirement": "Mandatory",
                     "status": "incomplete"
                   },
                   {
                     "URL": "native-desktop",
-                    "title": "Native desktop",
-                    "requirement": "*Mandatory",
+                    "title": "Native desktop*",
+                    "requirement": "Mandatory",
                     "status": "incomplete"
                   }
                 ]
@@ -228,19 +233,23 @@
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-three-quarters">
       {{ button({
-        "text": "Submit for moderation"
+        "href": "marketing-page",
+        "text": "Preview for moderation"
       }) }}
 
       {{ panel({
         "HTML": "<h3>Sections added by authority</h3>
-        <p>The following sections will be added by NHS Digital based on your framework tender, your Capability assessment, and its records of your NHS integrations.</p>
+        <p>The following sections will be added by NHS Digital based on your framework tender, your Capability assessment, and its records of your NHS integrations.</p><br>
         <ul>
-          <li><p>Commercial arrangements</p</li>
           <li><p>Price</p</li>
-          <li><p>Additional services</p</li>
-          <li><p>Integrations (assured by NHS)</p</li>
-          <li><p>Capabilities and Standards met</p</li>
+          <li><p>Transition timescale</p</li>
+          <li><p>Capabilities</p</li>
+          <li><p>Standards</p</li>
+          <li><p>Compliance work-off plans</p</li>
           <li><p>Service level information</p</li>
+          <li><p>NHS assured integrations</p</li>
+          <li><p>Additional services</p</li>
+          <li><p>Associated services</p</li>
         </ul>"
       }) }}
       </div>

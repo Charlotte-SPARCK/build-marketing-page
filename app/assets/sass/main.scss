@@ -43,6 +43,12 @@ p {
   float: right;
 }
 
+.sticky {
+  position: fixed;
+  top: 10px;
+  width: 33.3333%;
+}
+
 .nhsuk-table__body {
   width: 50%;
   vertical-align: top;

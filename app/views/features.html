@@ -50,73 +50,56 @@
         Each feature will be displayed as a bulleted list item. For example:
       </p>
       <ul>
-        <li><p>Create and change appointment entries<p></li>
+        <li><p class="nhsuk-body-l"><i>Create and change appointment entries</i><p></li>
       </ul>
+      <p class="nhsuk-body-l">
+        You can enter up to 100 characters per feature
+      </p>
     </div>
   </div>
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-three-quarters">
-        {{ govukCharacterCount({
-           name: "feature1",
-           id: "feature1",
-           maxlength: 300,
-           rows: 1
-         }) }}
-         {{ govukCharacterCount({
-            name: "feature2",
-            id: "feature2",
-            maxlength: 300,
-            rows: 1
-          }) }}
-          {{ govukCharacterCount({
-             name: "feature3",
-             id: "feature3",
-             maxlength: 300,
-             rows: 1
-           }) }}
-           {{ govukCharacterCount({
-              name: "feature4",
-              id: "feature4",
-              maxlength: 300,
-              rows: 1
-            }) }}
-            {{ govukCharacterCount({
-               name: "feature5",
-               id: "feature5",
-               maxlength: 300,
-               rows: 1
-             }) }}
-             {{ govukCharacterCount({
-                name: "feature6",
-                id: "feature6",
-                maxlength: 300,
-                rows: 1
-              }) }}
-              {{ govukCharacterCount({
-                 name: "feature7",
-                 id: "feature7",
-                 maxlength: 300,
-                 rows: 1
-               }) }}
-               {{ govukCharacterCount({
-                  name: "feature8",
-                  id: "feature8",
-                  maxlength: 300,
-                  rows: 1
-                }) }}
-                {{ govukCharacterCount({
-                   name: "feature9",
-                   id: "feature9",
-                   maxlength: 300,
-                   rows: 1
-                 }) }}
-                 {{ govukCharacterCount({
-                    name: "feature10",
-                    id: "feature10",
-                    maxlength: 300,
-                    rows: 1
-                  }) }}
+      {{ input({
+          "id": "feature-1",
+          "name": "feature-1"
+      }) }}
+      {{ input({
+          "id": "feature-2",
+          "name": "feature-2"
+      }) }}
+      {{ input({
+          "id": "feature-3",
+          "name": "feature-3"
+      }) }}
+      {{ input({
+          "id": "feature-4",
+          "name": "feature-4"
+      }) }}
+      {{ input({
+          "id": "feature-5",
+          "name": "feature-5"
+      }) }}
+      {{ input({
+          "id": "feature-6",
+          "name": "feature-6"
+      }) }}
+      {{ input({
+          "id": "feature-7",
+          "name": "feature-7"
+      }) }}
+      {{ input({
+          "id": "feature-8",
+          "name": "feature-8"
+      }) }}
+      {{ input({
+          "id": "feature-9",
+          "name": "feature-9"
+      }) }}
+      {{ input({
+          "id": "feature-10",
+          "name": "feature-10"
+      }) }}
 
       </div>
     </div>
