@@ -39,6 +39,27 @@ p {
   display: none;
 }
 
+#content {
+  float: right;
+}
+
+.nhsuk-table__body {
+  width: 50%;
+  vertical-align: top;
+}
+
+.nhsuk-expander {
+  background-color: $color_nhsuk-grey-5;
+
+  .nhsuk-details__summary {
+    background-color: $color_nhsuk-grey-5;
+  }
+}
+
+.nhsuk-table__cell {
+  width: 50%;
+}
+
 .govuk-hint {
   padding-bottom:10px;
 }

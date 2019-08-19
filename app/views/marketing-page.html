@@ -1,0 +1,1404 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS Digital Buying Catalogue
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+  {{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "My Solutions"
+    },
+    {
+      href: "/",
+      text: "Adding a Solution"
+    }
+  ],
+    href: "all-sections",
+    text: "All sections"
+    }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-one-third">
+      {{ contentsList({
+        items: [
+          {
+            href: "#solution-description",
+            text: "Solution description"
+          },
+          {
+            href: "#features",
+            text: "Features"
+          },
+          {
+            href: "#commercial-arrangements",
+            text: "Commercial arrangements"
+          },
+          {
+            href: "#price",
+            text: "Price"
+          },
+          {
+            href: "#associated-services",
+            text: "Associated services"
+          },
+          {
+            href: "#additional-services",
+            text: "Additional services"
+          },
+          {
+            href: "#nhs-integrations",
+            text: "Integrations (assured by NHS)"
+          },
+          {
+            href: "#supplier-integrations",
+            text: "Integrations (supplier asserted)"
+          },
+          {
+            href: "#capabilities-met",
+            text: "Capabilities met"
+          },
+          {
+            href: "#standards-met",
+            text: "NHS standards met"
+          },
+          {
+            href: "#client-type",
+            text: "Client application type"
+          },
+          {
+            href: "#hosting-type",
+            text: "Hosting type"
+          },
+          {
+            href: "#roadmap",
+            text: "Roadmap"
+          },
+          {
+            href: "#about-supplier",
+            text: "About supplier"
+          },
+          {
+            href: "#contact-details",
+            text: "Contact details"
+          }
+        ]
+      }) }}
+
+      {{ button({
+        "text": "Submit for moderation"
+      }) }}
+    </div>
+    <div class="nhsuk-grid-column-two-thirds" id="content">
+
+      <!-- Change the page title here -->
+      <h2>
+        Really Kool Document Manager, 1.0
+      </h2>
+
+      <div id="solution-description">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Solution description</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><h3 class="nhsuk-u-margin-bottom-0">Solution description</h3></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Solution description</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><b>Summary</b><br><br>
+                  <p>Really Kool Document Manager is one of the most popular document management suites in the UK. Our system is designed to be a complete document management solution that focuses on usability and clinical safety.</p>
+                </td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><b>About solution</b><br><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis. Praesent suscipit purus mauris, sed ornare nibh dignissim at. Donec pulvinar dui at arcu fringilla, vitae mattis ligula aliquam.</p><br>
+
+                  <p>Etiam dolor elit, pellentesque in eros eget, ultrices hendrerit nulla. Nulla vehicula malesuada quam. Etiam mattis sapien ac eros ornare, nec viverra nulla blandit. Cras consequat, justo id facilisis congue, ipsum est congue nibh, vitae commodo velit lorem sit amet urna. Vestibulum vitae erat elementum magna placerat ornare eu sit amet magna. Sed eget nisi at libero auctor fermentum. Etiam laoreet elementum ipsum, nec ornare nisi sodales sit amet. In et sagittis enim, eget fringilla ex. Etiam viverra, elit in vehicula convallis, dolor lacus dignissim leo, vel sollicitudin lectus mauris nec urna.</p><br>
+                  <a>Learn more</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="features">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Features</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><h3 class="nhsuk-u-margin-bottom-0">Features</h3></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Features</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  <ul>
+                    <li>View and add to clinical records, including shared data</li>
+                    <li>View daily appointments and diary entries</li>
+                    <li>View a map of patient appointment locations</li>
+                    <li>Update clinical records via templates</li>
+                    <li>Add user tasks</li>
+                    <li>Book follow-up appointments</li>
+                    <li>Create and amend appointment schedules</li>
+                    <li>Add new medication</li>
+                    <li>View and enter data on and offline</li>
+                    <li>View document attachments</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="commercial-arrangements">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Commercial arrangements</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><h3 class="nhsuk-u-margin-bottom-0">Commercial arrangements</h3></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Commercial arrangements</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Framework(s)</th>
+                <td class="nhsuk-table__cell">GP IT Futures Framework</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="price">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Price</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><h3 class="nhsuk-u-margin-bottom-0">Price</h3></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Price</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">List price</th>
+                <td class="nhsuk-table__cell">£xx per patient</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="associated-services">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Associated services (optional)</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><h3 class="nhsuk-u-margin-bottom-0">Associated services (optional)</h3></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Associated services (optional)</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Training (on site)</th>
+                <td class="nhsuk-table__cell">£3,500 per day</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Associated services (optional)</caption>
+            <tbody class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend diam magna, id lobortis purus fringilla convallis.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Associated services (optional)</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Training (online)</th>
+                <td class="nhsuk-table__cell">£2,000 per day</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Associated services (optional)</caption>
+            <tbody class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend diam magna, id lobortis purus fringilla convallis.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Associated services (optional)</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Training (virtual classroom)</th>
+                <td class="nhsuk-table__cell">£1,500 per day</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Associated services (optional)</caption>
+            <tbody class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend diam magna, id lobortis purus fringilla convallis.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="additional-services">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Additional services (optional) - NHS assured</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><h3 class="nhsuk-u-margin-bottom-0">Additional services (optional) - NHS assured</h3></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Additional services (optional) - NHS assured</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Unstructured Data Extraction</th>
+                <td class="nhsuk-table__cell">£xx per patient</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Additional services (optional) - NHS assured</caption>
+            <tbody class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend diam magna, id lobortis purus fringilla convallis.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Additional services (optional) - NHS assured</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Monthly reporting/analysis</th>
+                <td class="nhsuk-table__cell">£2,500 per month</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Additional services (optional) - NHS assured</caption>
+            <tbody class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend diam magna, id lobortis purus fringilla convallis.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Additional services (optional) - NHS assured</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Specialist extracts</th>
+                <td class="nhsuk-table__cell">£300 per month</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Associated services (optional)</caption>
+            <tbody class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend diam magna, id lobortis purus fringilla convallis.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="nhs-integrations">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Integrations (assured by NHS) (16 systems)</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><h3 class="nhsuk-u-margin-bottom-0">Integrations (assured by NHS) (16 systems)</h3></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Integrations (assured by NHS) (16 systems)</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">These Integrations are assured and added by the NHS.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "GPConnect (5 systems)",
+        "HTML": "
+        <table>
+          <tbody>
+            <tr>
+              <td>System 1</td>
+            </tr>
+            <tr>
+              <td>System 2</td>
+            </tr>
+            <tr>
+              <td>System 3</td>
+            </tr>
+            <tr>
+              <td>System 4</td>
+            </tr>
+            <tr>
+              <td>System 5</td>
+            </tr>
+          </tbody>
+        </table>"
+      }) }}
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "IM1 (3 systems)",
+        "HTML": "
+        <table>
+          <tbody>
+            <tr>
+              <td>RK Appointment Manager</td>
+            </tr>
+            <tr>
+              <td>TruBlue Data Management</td>
+            </tr>
+            <tr>
+              <td>ClearBlue Scanner</td>
+            </tr>
+          </tbody>
+        </table>"
+      }) }}
+
+      <div id="supplier-integrations">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Integrations (Supplier asserted)</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><h3 class="nhsuk-u-margin-bottom-0">Integrations (Supplier asserted)</h3></th>
+              </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__header" scope="col">These Integrations are added by the Supplier and are not assured by the NHS and may be partial therefore may not fully integrate with the system.</td>
+                </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Integrations (Supplier asserted)</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  <a>reallyKoolDocumentManager_1.0_Integrations.png</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="capabilities-met">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Capabilities met (assured by NHS)</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><h3 class="nhsuk-u-margin-bottom-0">Capabilities met (assured by NHS)</h3></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Integrations (assured by NHS) (16 systems)</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">If all ‘Must’ Epics have been met, the Capability is Full. If some 'Must' Epics have not been met the Capability is Partial.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Document Management, 1.0 (Full)",
+        "HTML": "
+        <table>
+          <tbody>
+            <tr>
+              <td><p>Supports the day-to-day recording, configuration, planning and scheduling of appointments. Also supports Practice reporting on appointments data.</p>
+              <p>For Full Capabilities, all ‘Must’ Epics have been met. </p></td>
+            </tr>
+            <tr>
+              <td>
+                <h4>Must Epics (Epics met are in bold)</h4>
+                <p>These Epics are required and have to be met in order to pass the Capability.</p>
+                <p><b>Epic 1 - Manage Patients</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 2 - Access patient records</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 3 - Manage patient related persons</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 4 - Manage patients for citizen services</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 5 - Manage patient communications</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 6 - Configure patient notifications</b><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 7 - Manage Practice notifications - patient</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 8 - Search for patient records</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 9 -  View patient reports</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 10 - Configure citizen service access for the practice</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 11 - Identify patients outside of catchment area</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><br>
+
+                  <h4>May Epics (Epics met are in bold)</h4>
+                  <p>These Epics are optional and not required in order to pass the Capability.</p>
+                  <p><b>Epic 12 - View subject access request reports</b><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p><b>Epic 13 - Manage acute prescription request service</b><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p><b>Epic 14 - Notify the patient of changes</b><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p>Epic 15 - Manage subject access request (SAR) requests</p>
+                  <p>Epic 16 - Notify the proxy of changes</p>
+                  <p>Epic 17 - Manage practice notifications - proxy</p>
+                  <p>Epic 18 - Configure proxy notifications</p>
+                  <p>Epic 19 - Manage proxy communications</p>
+                  <p>Epic 20 -  Manage proxys for citizen services</p>
+                  <a>View more including Acceptance Criteria for all Epics in Confluence.</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>"
+      }) }}
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Scanning, 1.0 (Full)",
+        "HTML": "
+        <table>
+          <tbody>
+            <tr>
+              <td><p>Supports the day-to-day recording, configuration, planning and scheduling of appointments. Also supports Practice reporting on appointments data.</p>
+              <p>For Full Capabilities, all ‘Must’ Epics have been met. </p></td>
+            </tr>
+            <tr>
+              <td>
+                <h4>Must Epics (Epics met are in bold)</h4>
+                <p>These Epics are required and have to be met in order to pass the Capability.</p>
+                <p><b>Epic 1 - Manage Patients</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 2 - Access patient records</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 3 - Manage patient related persons</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 4 - Manage patients for citizen services</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 5 - Manage patient communications</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 6 - Configure patient notifications</b><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 7 - Manage Practice notifications - patient</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 8 - Search for patient records</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 9 -  View patient reports</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 10 - Configure citizen service access for the practice</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 11 - Identify patients outside of catchment area</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><br>
+
+                  <h4>May Epics (Epics met are in bold)</h4>
+                  <p>These Epics are optional and not required in order to pass the Capability.</p>
+                  <p><b>Epic 12 - View subject access request reports</b><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p><b>Epic 13 - Manage acute prescription request service</b><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p><b>Epic 14 - Notify the patient of changes</b><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p>Epic 15 - Manage subject access request (SAR) requests</p>
+                  <p>Epic 16 - Notify the proxy of changes</p>
+                  <p>Epic 17 - Manage practice notifications - proxy</p>
+                  <p><b>Epic 18 - Configure proxy notifications</b><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p>Epic 19 - Manage proxy communications</p>
+                  <p>Epic 20 -  Manage proxys for citizen services</p>
+                  <a>View more including Acceptance Criteria for all Epics in Confluence.</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>"
+      }) }}
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Unstructured Data Extraction, 1.0 (Partial)",
+        "HTML": "
+        <table>
+          <tbody>
+            <tr>
+              <td><p>Supports the day-to-day recording, configuration, planning and scheduling of appointments. Also supports Practice reporting on appointments data.</p>
+              <p>For Full Capabilities, all ‘Must’ Epics have been met. </p></td>
+            </tr>
+            <tr>
+              <td>
+                <h4>Must Epics (Epics met are in bold)</h4>
+                <p>These Epics are required and have to be met in order to pass the Capability.</p>
+                <p><b>Epic 1 - Manage Patients</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 2 - Access patient records</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Epic 3 - Manage patient related persons</p>
+                <p><b>Epic 4 - Manage patients for citizen services</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 5 - Manage patient communications</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Epic 6 - Configure patient notifications</p>
+                <p>Epic 7 - Manage Practice notifications - patient</p>
+                <p><b>Epic 8 - Search for patient records</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 9 -  View patient reports</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 10 - Configure citizen service access for the practice</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><b>Epic 11 - Identify patients outside of catchment area</b><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><br>
+
+                  <h4>May Epics (Epics met are in bold)</h4>
+                  <p>These Epics are optional and not required in order to pass the Capability.</p>
+                  <p><b>Epic 12 - View subject access request reports</b><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p><b>Epic 13 - Manage acute prescription request service</b><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p><b>Epic 14 - Notify the patient of changes</b><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p>Epic 15 - Manage subject access request (SAR) requests</p>
+                  <p>Epic 16 - Notify the proxy of changes</p>
+                  <p>Epic 17 - Manage practice notifications - proxy</p>
+                  <p><b>Epic 18 - Configure proxy notifications</b><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p>Epic 19 - Manage proxy communications</p>
+                  <p>Epic 20 -  Manage proxys for citizen services</p>
+                  <a>View more including Acceptance Criteria for all Epics in Confluence.</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>"
+      }) }}
+
+      <div id="standards-met">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">NHS Standards met (assured by NHS) </caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><h3 class="nhsuk-u-margin-bottom-0">NHS Standards met (assured by NHS)</h3></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">NHS Standards met (assured by NHS)</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">If all ‘Must’ Epics have been met, the Capability is Full. If some 'Must' Epics have not been met the Capability is Partial.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Associated Standards",
+        "HTML": "
+        <table>
+          <tbody>
+            <tr>
+              <th>Document Management Standard, 1.0</th>
+              <td><a>View detail</a></td>
+            </tr>
+            <tr>
+              <th>Scanning</th>
+              <td><a>View detail</a></td>
+            </tr>
+            <tr>
+              <th>Unstructured Data Extraction</th>
+              <td><a>View detail</a></td>
+            </tr>
+            <tr>
+              <th>Common Reporting Standard</th>
+              <td><a>View detail</a></td>
+            </tr>
+            <tr>
+              <th>MI Reporting Standard</th>
+              <td><a>View detail</a></td>
+            </tr>
+            <tr>
+              <th>GP2GP Standard</th>
+              <td><a>View detail</a></td>
+            </tr>
+          </tbody>
+        </table>"
+      }) }}
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Overarching Standards",
+        "HTML": "
+        <table>
+          <tbody>
+            <tr>
+              <th>Document Management Standard, 1.0</th>
+              <td><a>View detail</a></td>
+            </tr>
+            <tr>
+              <th>Scanning</th>
+              <td><a>View detail</a></td>
+            </tr>
+            <tr>
+              <th>Unstructured Data Extraction</th>
+              <td><a>View detail</a></td>
+            </tr>
+            <tr>
+              <th>Common Reporting Standard</th>
+              <td><a>View detail</a></td>
+            </tr>
+            <tr>
+              <th>MI Reporting Standard</th>
+              <td><a>View detail</a></td>
+            </tr>
+            <tr>
+              <th>GP2GP Standard</th>
+              <td><a>View detail</a></td>
+            </tr>
+          </tbody>
+        </table>"
+      }) }}
+
+      <div id="client-type">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Client application type</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><h3 class="nhsuk-u-margin-bottom-0">Client application type</h3></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Browser based application</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><p class="nhsuk-u-margin-bottom-0">Browser based application</p></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Browser based application</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Browsers supported</th>
+                <td class="nhsuk-table__cell">
+                  <ul class="nhsuk-u-margin-0">
+                    <li>Google Chrome</li>
+                    <li>Safari</li>
+                    <li>Internet Explorer 11</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Mobile responsive</th>
+                <td class="nhsuk-table__cell ">Yes</td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Plug-ins or extensions required</th>
+                <td class="nhsuk-table__cell ">Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Browser based application</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Plug-ins or extension details</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Browser based application</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Minimum connection speed required</th>
+                <td class="nhsuk-table__cell ">1Mbps</td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Recommended desktop aspect ratio and screen resolution</th>
+                <td class="nhsuk-table__cell ">4:3 800 x 600</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Browser based application</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Hardware requirements</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Browser based application</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Additional browser based information</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="native-mobile">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Native mobile or tablet application</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><p class="nhsuk-u-margin-bottom-0">Native mobile or tablet application</p></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Supported operating systems</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Supported operating systems</th>
+                <td class="nhsuk-table__cell">
+                  <ul class="nhsuk-u-margin-0">
+                    <li>Apple IOS</li>
+                    <li>Android</li>
+                    <li>Other</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Operating systems information</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Operating systems information</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Minimum connection speed required</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Minimum connection speed required</th>
+                <td class="nhsuk-table__cell ">1Mbps</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Connection types supported</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Connection types supported</th>
+                <td class="nhsuk-table__cell">
+                  <ul class="nhsuk-u-margin-0">
+                    <li>GPRS</li>
+                    <li>3G</li>
+                    <li>4G</li>
+                    <li>Wifi</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Additional connection type information</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Additional connection type information	</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Minimum memory requirement	</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Minimum memory requirement	</th>
+                <td class="nhsuk-table__cell ">4GB</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Storage requirement additional information</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Storage requirement additional information</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Hardware requirements</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Hardware requirements</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Additional mobile or tablet information</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Additional mobile or tablet informations</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="native-desktop">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Native desktop application</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><p class="nhsuk-u-margin-bottom-0">Native desktop application</p></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Supported operating systems</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Supported operating systems</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit.</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Minimum connection speed required</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Minimum connection speed required</th>
+                <td class="nhsuk-table__cell ">1Mbps</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Minimum memory requirement	</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Minimum memory requirement	</th>
+                <td class="nhsuk-table__cell ">4GB</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Storage requirement additional information</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Storage requirement additional information</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Minimum necessary CPU power</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Minimum necessary CPU power</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Recommended desktop aspect ratio and screen resolution</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">Recommended desktop aspect ratio and screen resolution</th>
+                <td class="nhsuk-table__cell ">1Mbps</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Third party components</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Third party components</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Device specifications</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Device specifications</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Hardware requirements</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Hardware requirements</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Additional desktop information</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Additional mobile or tablet informations</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="hosting-type">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Hosting type</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><h3 class="nhsuk-u-margin-bottom-0">Hosting type</h3></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Public cloud</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><p class="nhsuk-u-margin-bottom-0">Public cloud</p></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Public cloud requirements</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Requirements</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p><br>
+                 <a>Learn more</a>
+               </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">HSCN/N3 connectivity</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">HSCN/N3 connectivity</th>
+                <td class="nhsuk-table__cell ">Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="private-cloud">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Private cloud</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><p class="nhsuk-u-margin-bottom-0">Private cloud</p></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Requirements</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Requirements</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p><br>
+                 <a>Learn more</a>
+               </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Data centre hosting model</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Data centre hosting model</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis. Praesent suscipit purus mauris, sed ornare nibh dignissim at. Donec pulvinar dui at arcu fringilla, vitae mattis ligula aliquam. Etiam dolor elit, pellentesque in eros eget, ultrices hendrerit nulla.</p><br>
+                  <p>Nulla vehicula malesuada quam. Etiam mattis sapien ac eros ornare, nec viverra nulla blandit. Cras consequat, justo id facilisis congue, ipsum est congue nibh, vitae commodo velit lorem sit amet urna. Vestibulum vitae erat elementum magna placerat ornare eu sit amet magna. Sed eget nisi at libero auctor fermentum. Etiam laoreet elementum ipsum, nec ornare nisi sodales sit amet.</p>
+               </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">HSCN/N3 connectivity</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">HSCN/N3 connectivity</th>
+                <td class="nhsuk-table__cell ">Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="hybrid">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Hybrid hosting</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><p class="nhsuk-u-margin-bottom-0">Hybrid hosting</p></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Requirements</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Requirements</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p><br>
+                 <a>Learn more</a>
+               </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Data centre hosting model</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Data centre hosting model</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis. Praesent suscipit purus mauris, sed ornare nibh dignissim at. Donec pulvinar dui at arcu fringilla, vitae mattis ligula aliquam. Etiam dolor elit, pellentesque in eros eget, ultrices hendrerit nulla.</p><br>
+                  <p>Nulla vehicula malesuada quam. Etiam mattis sapien ac eros ornare, nec viverra nulla blandit. Cras consequat, justo id facilisis congue, ipsum est congue nibh, vitae commodo velit lorem sit amet urna. Vestibulum vitae erat elementum magna placerat ornare eu sit amet magna. Sed eget nisi at libero auctor fermentum. Etiam laoreet elementum ipsum, nec ornare nisi sodales sit amet.</p>
+               </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">HSCN/N3 connectivity</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">HSCN/N3 connectivity</th>
+                <td class="nhsuk-table__cell ">Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="on-premise">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">On premise hosting</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><p class="nhsuk-u-margin-bottom-0">On premise hosting</p></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Requirements</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Requirements</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis.</p><br>
+                 <a>Learn more</a>
+               </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Data centre hosting model</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><p><b>Data centre hosting model</b></p><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis. Praesent suscipit purus mauris, sed ornare nibh dignissim at. Donec pulvinar dui at arcu fringilla, vitae mattis ligula aliquam. Etiam dolor elit, pellentesque in eros eget, ultrices hendrerit nulla.</p><br>
+                  <p>Nulla vehicula malesuada quam. Etiam mattis sapien ac eros ornare, nec viverra nulla blandit. Cras consequat, justo id facilisis congue, ipsum est congue nibh, vitae commodo velit lorem sit amet urna. Vestibulum vitae erat elementum magna placerat ornare eu sit amet magna. Sed eget nisi at libero auctor fermentum. Etiam laoreet elementum ipsum, nec ornare nisi sodales sit amet.</p>
+               </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">HSCN/N3 connectivity</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__cell">HSCN/N3 connectivity</th>
+                <td class="nhsuk-table__cell ">Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="roadmap">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Roadmap</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><h3 class="nhsuk-u-margin-bottom-0">Roadmap</h3></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Roadmap</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  <a>reallyKoolDocumentManager_1.0_Roadmap_2019.png</a>
+                </td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  <p>We plan to deliver a task management function by Autumn 2019. We are also going to achieve the updated Document Management Standard ahead of schedule in August 2019.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="about-supplier">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">About supplier</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><h3 class="nhsuk-u-margin-bottom-0">About supplier</h3></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">About supplier</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam orci nibh, mollis id ex et, condimentum pharetra velit. Aenean lobortis justo sed nulla blandit, nec volutpat erat venenatis. Praesent suscipit purus mauris, sed ornare nibh dignissim at. Donec pulvinar dui at arcu fringilla, vitae mattis ligula aliquam.</p><br>
+
+                  <p>Etiam dolor elit, pellentesque in eros eget, ultrices hendrerit nulla. Nulla vehicula malesuada quam. Etiam mattis sapien ac eros ornare, nec viverra nulla blandit. Cras consequat, justo id facilisis congue, ipsum est congue nibh, vitae commodo velit lorem sit amet urna. Vestibulum vitae erat elementum magna placerat ornare eu sit amet magna. Sed eget nisi at libero auctor fermentum. Etiam laoreet elementum ipsum, nec ornare nisi sodales sit amet. In et sagittis enim, eget fringilla ex. Etiam viverra, elit in vehicula convallis, dolor lacus dignissim leo, vel sollicitudin lectus mauris nec urna.</p><br>
+                  <a>Learn more</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="contact-details">
+        <div class="nhsuk-table-responsive nhsuk-u-margin-bottom-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Contact details</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header" scope="col"><h3 class="nhsuk-u-margin-bottom-0">Contact details</h3></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="nhsuk-table-responsive nhsuk-u-margin-0">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Contact 1</caption>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  <p><b>Contact 1</b></p>
+                  <p>IT Department</p>
+                  <p>Fred Flintstone</p>
+                  <p>07712345678</p>
+                  <p>it@example.co.uk</p>
+                </td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">
+                  <p><b>Contact 2</b></p>
+                  <p>Sales Department</p>
+                  <p>Barney Rubble</p>
+                  <p>07712345678</p>
+                  <p>sales@example.co.uk</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <div class="nhsuk-grid-row nhsuk-u-margin-top-5">
+        <div class="nhsuk-grid-column-three-quarters">
+      {{ backLink({
+        "href": "all-sections",
+        "text": "Return to all sections"
+      }) }}
+      </div>
+   </div>
+
+      <!-- End of content -->
+
+
+{% endblock %}
