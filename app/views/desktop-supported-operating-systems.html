@@ -61,17 +61,53 @@
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-three-quarters">
-        {{ govukCharacterCount({
-           name: "system-description",
-           id: "system-description",
-           maxlength: 100,
-           rows: 2,
-           label: {
-             html: "<b>Descripton of supported operating systems*</b>"
-           },
-           hint: {
-             text: "Provide details of the operating systems the Solution supports."
-           }
+         {{ label({
+            "html": "<b>Descripton of supported operating systems*<b>"
+          }) }}
+          {{ hint({
+            "html": "<p>Provide details of the operating systems the Solution supports.<p>
+              <p>You can enter up to 100 characters per field</p>"
+          }) }}
+
+         {{ input({
+             "id": "system-1",
+             "name": "system-1"
+         }) }}
+         {{ input({
+             "id": "system-2",
+             "name": "system-2"
+         }) }}
+         {{ input({
+             "id": "system-3",
+             "name": "system-3"
+         }) }}
+         {{ input({
+             "id": "system-4",
+             "name": "system-4"
+         }) }}
+         {{ input({
+             "id": "system-5",
+             "name": "system-5"
+         }) }}
+         {{ input({
+             "id": "system-6",
+             "name": "system-6"
+         }) }}
+         {{ input({
+             "id": "system-7",
+             "name": "system-7"
+         }) }}
+         {{ input({
+             "id": "system-8",
+             "name": "system-8"
+         }) }}
+         {{ input({
+             "id": "system-9",
+             "name": "system-9"
+         }) }}
+         {{ input({
+             "id": "system-10",
+             "name": "system-10"
          }) }}
       </div>
     </div>
